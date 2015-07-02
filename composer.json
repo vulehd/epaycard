@@ -1,13 +1,19 @@
 {
-    "name": "vulehd/epaycard",
-    "type": "library",
-    "require": {
-        "asistenteweb/nusoap": "^0.1.0"
-    },
-    "authors": [
-        {
-            "name": "Vu Le",
-            "email": "vu.le@hotdeal.vn"
-        }
-    ]
+  "name": "vulehd/epaycard",
+  "type": "library",
+  "require": {
+    "asistenteweb/nusoap": "^0.1.0",
+    "phpseclib/phpseclib": "0.3.10"
+  },
+  "authors": [
+    {
+      "name": "Vu Le",
+      "email": "vu.le@hotdeal.vn"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "Epay": "src/"
+    }
+  }
 }

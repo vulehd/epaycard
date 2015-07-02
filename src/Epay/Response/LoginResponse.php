@@ -2,7 +2,10 @@
 
 namespace Epay\Response;
 
+use Epay\Response;
+
 class LoginResponse extends Response
 {
-	public $Session_ID;
+	public $SessionID;
+    public $TransID;
 }
