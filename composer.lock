@@ -1,0 +1,68 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "c5bf17007b09cafca673f3edc5dc8f9d",
+    "packages": [
+        {
+            "name": "asistenteweb/nusoap",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AsistenteWeb/NuSOAP.git",
+                "reference": "bbe8203bfd88e63e064e0f5d470cb314495fbc7c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AsistenteWeb/NuSOAP/zipball/bbe8203bfd88e63e064e0f5d470cb314495fbc7c",
+                "reference": "bbe8203bfd88e63e064e0f5d470cb314495fbc7c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Aw\\Nusoap": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GNU"
+            ],
+            "authors": [
+                {
+                    "name": "Asistente Web",
+                    "homepage": "http://www.asistenteweb.com"
+                },
+                {
+                    "name": "Yamir Ramirez",
+                    "homepage": "https://github.com/ysramirez"
+                },
+                {
+                    "name": "NewSphere",
+                    "homepage": "http://www.nusphere.com/php_script/nusoap.htm"
+                }
+            ],
+            "description": "PHP5 library for SOAP.",
+            "homepage": "https://github.com/AsistenteWeb/nuSOAP",
+            "keywords": [
+                "asistenteweb",
+                "nusoap",
+                "soap"
+            ],
+            "time": "2015-05-18 17:01:59"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

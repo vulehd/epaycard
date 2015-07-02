@@ -1,0 +1,13 @@
+{
+    "name": "vulehd/epaycard",
+    "type": "library",
+    "require": {
+        "asistenteweb/nusoap": "^0.1.0"
+    },
+    "authors": [
+        {
+            "name": "Vu Le",
+            "email": "vu.le@hotdeal.vn"
+        }
+    ]
+}
