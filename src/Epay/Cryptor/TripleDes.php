@@ -1,6 +1,6 @@
 <?php
 
-namespace Epay;
+namespace Epay\Cryptor;
 
 class TripleDes
 {

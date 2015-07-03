@@ -12,9 +12,8 @@ class Login extends Service
 
     public function run(Array $data = array())
     {
-        $rsa = new \Crypt_RSA();
-        $rsa->loadKey(file_get_contents($this->config->PublicKeyFile));
-        $rsa->setEncryptionMode(CRYPT_RSA_ENCRYPTION_PKCS1);
+		$rsa = new \Epay\Cryptor\RSA();
+		$rsa->setPublicKey(file_get_contents($this->config->PublicKeyFile));
         $encryptedPassword = base64_encode($rsa->encrypt($this->config->Password));
 
         $result = $this->client->call(self::CMD, array(
@@ -28,7 +27,7 @@ class Login extends Service
         $response->Message = $result['message'];
 
         if ($result['status'] == 1) {
-            $rsa->loadKey(file_get_contents($this->config->PrivateKeyFile));
+            $rsa->setPrivateKey(file_get_contents($this->config->PrivateKeyFile));
             $sessionID = $rsa->decrypt(base64_decode($result['sessionid']));
 
             $response->SessionID = $sessionID;
