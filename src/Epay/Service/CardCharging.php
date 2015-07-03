@@ -15,7 +15,7 @@ class CardCharging extends Service
         $des = new \Epay\Cryptor\TripleDes($this->HextoByte($this->config->SessionID));
 
         $result = $this->client->call(self::CMD, array(
-            'transid'       => sprintf('%s_%s', $this->config->PartnerCode, (isset($data['TransID']) ? $data['TransID'] : date("YmdHms").millitime() )),
+            'transid'       => sprintf('%s_%s', $this->config->PartnerCode, (isset($data['TransID']) ? $data['TransID'] : date("YmdHis").millitime() )),
             'username'      => $this->config->UserName,
             'partnerID'     => $this->config->PartnerID,
             'mpin'          => $this->ByteToHex($des->encrypt($this->config->MPIN)),
@@ -44,5 +44,5 @@ function millitime() {
 
 	// Note: Using a string here to prevent loss of precision
 	// in case of "overflow" (PHP converts it to a double)
-	return sprintf('%d%03d', $comps[1], $comps[0] * 1000);
+	return round($comps[0] * 1000);
 }
